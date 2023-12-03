@@ -4,7 +4,7 @@ async function fetchWeather() {
     const weatherDataSection = document.getElementById("weather-data");
     weatherDataSection.style.display = "block";
   
-    const apiKey = "fa653a096975f5a0481c88b8db1932cf";
+    const apiKey = "remove with your API key";
   
   
     if(searchInput == "") {
@@ -19,7 +19,7 @@ async function fetchWeather() {
   
     // Step b. Get lat and lon coordinates via Geocoding API
     async function getLonAndLat() {
-      const countryCode = 'IN';
+      const countryCode = 'IN';  //Country Code can be Changed According to your Need
       geocodeURL = `http://api.openweathermap.org/geo/1.0/direct?q=${searchInput},${countryCode}&limit=1&appid=${apiKey}`;
   
       const response = await fetch(geocodeURL);
